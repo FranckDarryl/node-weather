@@ -4,6 +4,8 @@ import fetch from 'node-fetch';
 const app = express();
 const PORT = 9000;
 
+// Dans votre app Node.js
+app.get('/health', (req, res) => res.status(200).send('OK'));
 app.use(express.json());
 
 app.get('/health', (req, res) => {
